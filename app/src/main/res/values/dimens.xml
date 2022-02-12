@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_padding">25dp</dimen>
+    <dimen name="Description_size">16sp</dimen>
+    <dimen name="shoes_name_size">20sp</dimen>
+    <dimen name="company_name_size">18sp</dimen>
+    <dimen name="size_shoes_size">20sp</dimen>
+
+</resources>

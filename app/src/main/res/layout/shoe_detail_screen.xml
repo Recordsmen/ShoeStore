@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.ShoeDetailScreen">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.viewModel.ShoeListingScreenViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryColor">
+
+        <EditText
+            android:id="@+id/et_shoe_name"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:hint="@string/shoe_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.112"
+            android:text="@={viewModel.newShoeName}"
+            />
+
+        <EditText
+            android:id="@+id/et_shoe_size"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:hint="@string/shoe_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/et_shoe_company"
+            app:layout_constraintTop_toBottomOf="@+id/et_shoe_company"
+            app:layout_constraintVertical_bias="0.05"
+            android:text="@={viewModel.newShoeSize}"
+            />
+
+        <EditText
+            android:id="@+id/et_shoe_company"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:hint="@string/company"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_shoe_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/et_shoe_name"
+            app:layout_constraintTop_toBottomOf="@+id/et_shoe_name"
+            app:layout_constraintVertical_bias="0.063"
+            android:text="@={viewModel.newCompanyName}" />
+
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:hint="@string/description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_shoe_size"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/et_shoe_size"
+            app:layout_constraintTop_toBottomOf="@+id/et_shoe_size"
+            app:layout_constraintVertical_bias="0.067"
+            android:text="@={viewModel.newShoeDescription}"
+            />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#90caf9  "
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_description"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_description"
+            app:layout_constraintVertical_bias="0.542" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#90caf9  "
+            android:text="@android:string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_save"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/et_description"
+            app:layout_constraintTop_toBottomOf="@+id/et_description"
+            app:layout_constraintVertical_bias="0.542" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginScreen">
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.udacity.shoestore.ui.LoginScreen"
+        android:label="login_screen"
+        tools:layout="@layout/login_screen" >
+        <action
+            android:id="@+id/action_loginScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen" />
+        <action
+            android:id="@+id/action_loginScreen_to_welcomeScreen2"
+            app:destination="@id/welcomeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="com.udacity.shoestore.ui.WelcomeScreen"
+        android:label="welcome_screen"
+        tools:layout="@layout/welcome_screen" >
+        <argument android:name="Email"
+            app:argType="string" />
+        <argument
+            android:name="Password"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_welcomeScreen_to_instructionsScreen2"
+            app:destination="@id/instructionsScreen2" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsScreen2"
+        android:name="com.udacity.shoestore.ui.InstructionsScreen"
+        android:label="insctructions_screen"
+        tools:layout="@layout/insctructions_screen" >
+        <action
+            android:id="@+id/action_instructionsScreen2_to_shoeListingScreen"
+            app:destination="@id/shoeListingScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListingScreen"
+        android:name="com.udacity.shoestore.ui.ShoeListingScreen"
+        android:label="shoe_listing_screen"
+        tools:layout="@layout/shoe_listing_screen" >
+        <action
+            android:id="@+id/action_shoeListingScreen_to_shoeDetailScreen"
+            app:destination="@id/shoeDetailScreen" />
+        <action
+            android:id="@+id/action_shoeListingScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailScreen"
+        android:name="com.udacity.shoestore.ui.ShoeDetailScreen"
+        android:label="shoe_detail_screen"
+        tools:layout="@layout/shoe_detail_screen" >
+        <action
+            android:id="@+id/action_shoeDetailScreen_to_shoeListingScreen"
+            app:destination="@id/shoeListingScreen"
+            app:popUpTo="@id/instructionsScreen2" />
+        <action
+            android:id="@+id/action_shoeDetailScreen_to_shoeListingScreen2"
+            app:destination="@id/shoeListingScreen"
+            app:popUpTo="@id/instructionsScreen2">
+        </action>
+    </fragment>
+</navigation>

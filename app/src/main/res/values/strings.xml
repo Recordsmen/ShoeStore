@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="welcome_to_shoestore">Welcome to ShoeStore</string>
+    <string name="overview">Here is instruction to use ShoeStore</string>
+
+    <string name="instruction">Press plus to add a new item in the shoe, you need to write a name, company, size and a little description about shoes</string>
+
+    <string name="you_can_look_at_full_list_of_shoe">Here you need to add a new shoe in a list of shoes</string>
+
+    <string name="shoe_name">Shoe name</string>
+    <string name="company">Company</string>
+    <string name="shoe_size">Size</string>
+    <string name="description">Descriprion</string>
+
+    <string name="logout">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="incomplete_text">Please enter all fields!</string>
+
+</resources>
