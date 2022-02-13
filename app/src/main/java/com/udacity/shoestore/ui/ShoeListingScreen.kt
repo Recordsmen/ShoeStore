@@ -3,6 +3,7 @@ package com.udacity.shoestore.ui
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.observe
@@ -22,7 +23,7 @@ class ShoeListingScreen: Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        binding = ShoeListingScreenBinding.inflate(layoutInflater,container,false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.shoe_listing_screen,container,false)
         binding.lifecycleOwner = this
         binding.addShoeButton.setOnClickListener{
             this.findNavController().navigate(ShoeListingScreenDirections.actionShoeListingScreenToShoeDetailScreen())

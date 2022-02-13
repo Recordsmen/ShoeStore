@@ -49,7 +49,8 @@
             app:destination="@id/shoeDetailScreen" />
         <action
             android:id="@+id/action_shoeListingScreen_to_loginScreen"
-            app:destination="@id/loginScreen" />
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/loginScreen" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailScreen"
