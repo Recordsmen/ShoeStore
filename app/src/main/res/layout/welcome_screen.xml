@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.WelcomeScreen">
 
+    <!--Using ConstraintLayout to get an adaptable screen on rotation screen situation -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

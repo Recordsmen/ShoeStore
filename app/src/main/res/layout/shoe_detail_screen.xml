@@ -8,6 +8,8 @@
             name="viewModel"
             type="com.udacity.shoestore.viewModel.ShoeListingScreenViewModel" />
     </data>
+
+    <!--Using ConstraintLayout to get an adaptable screen on rotation screen situation -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

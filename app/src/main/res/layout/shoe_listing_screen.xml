@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.ShoeListingScreen">
 
+    <!--Using ConstraintLayout to get an adaptable screen on rotation screen situation -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck">
-
+            <!--Using LinearLayout to get a vertical list of items. We don't use ConstraintLayout here because we have only one item in our list  -->
             <LinearLayout
                 android:id="@+id/shoe_list"
                 android:layout_width="match_parent"
